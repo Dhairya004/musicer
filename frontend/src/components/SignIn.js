@@ -36,7 +36,7 @@ export default function SignIn() {
             Sign In
           </Typography>
           <Typography id="modal-modal-description" sx={{ mt: 3, mb: 4, textAlign: 'center' }}>
-            Sign into your musicer account. Already have an account? Click <Link to="/register">here.</Link>
+            Sign into your musicer account. Don't have an account? Click <Link to="/register">here</Link>.
           </Typography>
           <Typography sx={{ mb: 2 }}>
             Usename/Email ID

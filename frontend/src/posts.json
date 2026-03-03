@@ -1,23 +1,23 @@
 [
   {
     "opusername": "linda",
-    "profilePhotoUrl": "profile photos/profile.jpeg",
-    "musicName": "Never gonna give you up",
-    "imgUrl": "profile images/bg.jpeg",
-    "description": "Excited! With Friends! Is this a joke to you? Freak!"
+    "profilePhotoUrl": "profile photos/linda.jpeg",
+    "musicName": "Believer - Imagine Dragons",
+    "imgUrl": "profile images/linda_post.jpeg",
+    "description": "At the concert with friends! Excited!"
   },
   {
-    "opusername": "linda",
-    "profilePhotoUrl": "profile photos/profile.jpeg",
-    "musicName": "Never gonna give you up",
-    "imgUrl": "profile images/bg.jpeg",
-    "description": "Excited! With Friends! Is this a joke to you? Freak!"
+    "opusername": "jack007",
+    "profilePhotoUrl": "profile photos/jack007.jpg",
+    "musicName": "Night Changes - One Direction",
+    "imgUrl": "profile images/jack007_post.jpg",
+    "description": "Night photography."
   },
   {
-    "opusername": "linda",
-    "profilePhotoUrl": "profile photos/profile.jpeg",
-    "musicName": "Never gonna give you up",
-    "imgUrl": "profile images/bg.jpeg",
-    "description": "Excited! With Friends! Is this a joke to you? Freak!"
+    "opusername": "rachel_greennn",
+    "profilePhotoUrl": "profile photos/rachel_greennn.jpg",
+    "musicName": "Smooth criminal - Michael Jackson",
+    "imgUrl": "profile images/rachel_post.jpg",
+    "description": "Haha! This old man cracked me up!"
   }
 ]

@@ -1,46 +1,29 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-const mongodb = require('mongodb');
+const express = require("express");
+const cors = require("cors");
+require("dotenv").config();
+const connectDB = require("./routes/db");
 
 const app = express();
-const port = 3001;
 
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
+app.use(cors());
+app.use(express.json()); // parse JSON body
 
-// MongoDB connection URL
-const url = 'mongodb://localhost:27017';
+connectDB();
 
-// MongoDB database name
-const dbName = 'users';
+app.get("/api/welcome", (req, res) => {
+  res.json({ message: "Welcome to the Musicer API!" });
+});
 
-// Connect to MongoDB
-mongodb.MongoClient.connect(url, { useUnifiedTopology: true }, (err, client) => {
-  if (err) {
-    console.error('Failed to connect to MongoDB:', err);
-    return;
-  }
+app.get("/api/hello", (req, res) => {
+  res.json({ message: "Hello there!" });
+});
 
-  const db = client.db(dbName);
+const authRoutes = require("./routes/auth");
+app.use(authRoutes);
+const fetchPostRoutes = require("./routes/fetchPosts");
+app.use(fetchPostRoutes);
 
-  // Define an API endpoint to handle the registration data
-  app.post('/register', (req, res) => {
-    const userData = req.body; // Get the user data from the request body
 
-    // Insert the user data into the MongoDB collection
-    db.collection('users').insertOne(userData, (err, result) => {
-      if (err) {
-        console.error('Failed to insert data into MongoDB:', err);
-        res.status(500).json({ error: 'Failed to register user' });
-      } else {
-        console.log('User registered successfully:', result.insertedId);
-        res.status(200).json({ message: 'User registered successfully' });
-      }
-    });
-  });
-
-  // Start the server
-  app.listen(port, () => {
-    console.log(`Server is running on port ${port}`);
-  });
+app.listen(5000, () => {
+  console.log("Server running on port 5000");
 });
